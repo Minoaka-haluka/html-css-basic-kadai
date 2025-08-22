@@ -1,0 +1,84 @@
+body,
+h1,
+p {
+    margin: 0;
+}
+
+p,
+a {
+    font-size: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+main {
+    padding: 10px;
+}
+
+#parent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contents {
+    border: 3px solid rgb(238, 204, 204);
+    flex-basis: 25%;
+    padding: 10px 15px;
+    margin: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contents h2 {
+    font-size: 25px;
+    border-bottom: 3px dotted rgb(236, 122, 122);
+    position: relative;
+    padding-left: 20px;
+}
+
+.contents h2::before {
+    content: "●";
+    color: rgb(239, 111, 139);
+    position: absolute;
+    left: 0;
+}
+
+.contents p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+
+.contents img {
+    margin: 10px 0;
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    #parent {
+        flex-direction: column;
+        align-items: center;
+        /* 中央寄せ */
+    }
+
+    .contents {
+        flex-basis: 100%;
+    }
+
+    .contents h2 {
+        font-size: 30px;
+    }
+
+    .contents p,
+    a {
+        font-size: 25px;
+    }
+}
